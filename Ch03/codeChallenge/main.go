@@ -12,7 +12,7 @@ const showHints = false
 func slicesToObjects(colorNames []string, hexValues []int) []Color {
 	// Your code goes here.
 	// Create a slice of Color object
-	var colors []Color = make([]Color, 0)
+	var colors []Color = make([]Color, 0, len(colorNames))
 
 	for i := range colorNames {
 		colors = append(colors, Color{colorNames[i], hexValues[i]})
